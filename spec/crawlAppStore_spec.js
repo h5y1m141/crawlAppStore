@@ -22,7 +22,7 @@
       targetURL = "https://itunes.apple.com/us/app/craftbeerfan/id687522439?mt=8";
       return this.crawller.fetch(targetURL, function(result) {
         console.log(result);
-        expect(result.title).toEqual("CraftBeerFan");
+        expect(result.title).toEqual("CraftBeerFan on the App Store on iTunes");
         return done();
       });
     }, 8000);
