@@ -28,12 +28,31 @@ class crawlAppStore
         callback result
 
   postToACS:(htmlData,callback) ->
+    @_login (session_id) =>
+      @ACS.Objects.create
+        classname:"appStoreData"
+        session_id:session_id
+        fields:
+          htmlData:htmlData
+          storeCategory:"iTunes" # iTunes or Google Play
+      , (e) ->
+        callback e
+
     result =
       success:true
       
     return callback result        
 
-
+  _login:(callback) ->
+    data =
+      login: @loginID
+      password: @loginPasswd
     
-exports.crawlAppStore = crawlAppStore    
+    @ACS.Users.login data, (response) =>
+      if response.success
+        # @loggerRequest.info(response.meta.session_id)
+        callback(response.meta.session_id)
+      else
+        @loggerRequest.info "Error to login: " + response.message
 
+exports.crawlAppStore = crawlAppStore    
