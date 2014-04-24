@@ -23,7 +23,11 @@ class crawlAppStore
           
         callback result
 
-        
+  postToACS:(htmlData,callback) ->
+    result =
+      success:true
+      
+    return callback result        
 
 
     
