@@ -1,0 +1,17 @@
+{
+    "acs":{
+        "development" :"HTKjFicjmsoh4cHmtrSHFxVZnvPqbYTe",
+        "production"  :"9yK7bXy0JPVFfRJe3Gd8xvxBGYgm0xah",
+        "user":{
+            "id":"hassy0607",
+            "password":"per@1ch1"
+        }
+    },
+    "appList":[
+        {
+            "name":"CraftBeerFan on the App Store on iTunes",
+            "url":"https://itunes.apple.com/us/app/craftbeerfan/id687522439?mt=8"
+        }
+
+    ]
+}

@@ -1,6 +1,10 @@
 class crawlAppStore
   constructor:() ->
-    
+    conf = require('config')
+    @ACS = require('acs-node')
+    @loginID = conf.acs.user.id
+    @loginPasswd = conf.acs.user.password
+    @ACS.init(conf.acs.development)        
     return
     
   showData:() ->
