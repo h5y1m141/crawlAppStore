@@ -19,5 +19,21 @@ describe "Crawl", () ->
       expect(result.title).toEqual "CraftBeerFan on the App Store on iTunes"
       done()
       
-  , 8000    
+  , 8000
+  
+describe "Post To ACS", () ->
+  beforeEach ->
+    @crawller = new crawlAppStore()
+
+  it 'should be post sample html to ACS', (done) ->
+    sampleHTML = """
+      <html>
+      <body>test</body>
+      </html>
+    """
+    @crawller.postToACS sampleHTML, (result) ->
+      expect(result.success).toBe true
+      done()
+      
+  , 5000
   

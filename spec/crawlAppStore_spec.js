@@ -28,4 +28,18 @@
     }, 8000);
   });
 
+  describe("Post To ACS", function() {
+    beforeEach(function() {
+      return this.crawller = new crawlAppStore();
+    });
+    return it('should be post sample html to ACS', function(done) {
+      var sampleHTML;
+      sampleHTML = "<html>\n<body>test</body>\n</html>";
+      return this.crawller.postToACS(sampleHTML, function(result) {
+        expect(result.success).toBe(true);
+        return done();
+      });
+    }, 5000);
+  });
+
 }).call(this);
