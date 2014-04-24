@@ -1,10 +1,10 @@
 {
     "acs":{
-        "development" :"HTKjFicjmsoh4cHmtrSHFxVZnvPqbYTe",
-        "production"  :"9yK7bXy0JPVFfRJe3Gd8xvxBGYgm0xah",
+        "development" :"YOUR KEY",
+        "production"  :"YOUR KEY",
         "user":{
-            "id":"hassy0607",
-            "password":"per@1ch1"
+            "id":"YOURID",
+            "password":"PASSWORD"
         }
     },
     "appList":[
